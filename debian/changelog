@@ -1,5 +1,104 @@
-template-repository (1.0-1) unstable; urgency=medium
+mimalloc (2.1.7+ds-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version.
+  * d/copyright: add bin to Files-Excluded.
+  * d/rules: skip dh_dwz.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Alex Myczko <tar@debian.org>  Thu, 23 May 2024 07:59:28 +0000
+
+mimalloc (2.1.4+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: bump years.
+  * Bump standards version to 4.7.0.
+
+ -- Alex Myczko <tar@debian.org>  Wed, 24 Apr 2024 06:22:04 +0200
+
+mimalloc (2.1.2+ds-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Gürkan Myczko <tar@debian.org>  Mon, 12 Jun 2023 09:54:29 +0200
+
+mimalloc (2.1.2+ds-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 09 May 2023 09:24:42 +0200
+
+mimalloc (2.1.1+ds-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 04 Apr 2023 12:48:05 +0200
+
+mimalloc (2.1.0+ds-1) experimental; urgency=medium
+
+  * New upstream version.
+  * Bump standards version to 4.6.2.
+
+ -- Gürkan Myczko <tar@debian.org>  Fri, 31 Mar 2023 14:56:39 +0200
+
+mimalloc (2.0.9+ds-2) unstable; urgency=medium
+
+  * d/rules: specify build type. (Closes: #1030108)
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 31 Jan 2023 10:21:15 +0100
+
+mimalloc (2.0.9+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: bump years.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 03 Jan 2023 13:04:46 +0100
+
+mimalloc (2.0.7+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Gürkan Myczko <tar@debian.org>  Sun, 06 Nov 2022 21:23:56 +0100
+
+mimalloc (2.0.6+ds-2) unstable; urgency=medium
+
+  * Move CMake files to -dev package.
+  * Apply patch to fix FTBFS for atomic platforms.
+    Thanks Roger Shimizu.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 19 Jul 2022 08:56:02 +0200
+
+mimalloc (2.0.6+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Gürkan Myczko <tar@debian.org>  Mon, 18 Apr 2022 12:18:05 +0200
+
+mimalloc (2.0.5+ds-3) unstable; urgency=medium
+
+  * Also ship cmake config files. (Closes: #1008993)
+
+ -- Gürkan Myczko <tar@debian.org>  Wed, 06 Apr 2022 12:27:44 +0200
+
+mimalloc (2.0.5+ds-2) unstable; urgency=medium
+
+  * Strip mimalloc-2.0 from include installation path. (Closes: #1006249)
+
+ -- Gürkan Myczko <tar@debian.org>  Wed, 23 Feb 2022 21:33:01 +0100
+
+mimalloc (2.0.5+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/copyright: update year.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 15 Feb 2022 09:08:27 +0100
+
+mimalloc (2.0.3+ds-2) unstable; urgency=medium
+
+  * Fix FTBFS by linking atomic.
+
+ -- Gürkan Myczko <tar@debian.org>  Mon, 14 Feb 2022 23:35:00 +0100
+
+mimalloc (2.0.3+ds-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #931079)
+
+ -- Gürkan Myczko <tar@debian.org>  Wed, 12 Jan 2022 13:10:57 +0100
