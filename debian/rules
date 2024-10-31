@@ -1,4 +1,34 @@
 #!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+LIBATOMIC=OFF
+ifneq (,$(filter $(DEB_HOST_ARCH), armel m68k mips mipsel powerpc powerpcspe sh4))
+  LIBATOMIC=ON
+endif
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+	-DMI_BUILD_STATIC=OFF \
+	-DMI_BUILD_OBJECT=OFF \
+	-DMI_BUILD_TESTS=OFF \
+	-DMI_INSTALL_TOPLEVEL=ON \
+	-DMI_USE_LIBATOMIC=$(LIBATOMIC) \
+
+override_dh_missing:
+	@echo ACK
+
+override_dh_dwz:
+	@echo YES
